@@ -21,7 +21,7 @@ The exposed variables could look like that :
 
 ```python
 python -m venv .venv
-source.venv/bin/activate
+source .venv/bin/activate
 pip install -r requirements.txt
 wget https://raw.githubusercontent.com/wepfen/modbus-registers-mapper/refs/heads/main/map_modbus_registers.py
 ```
