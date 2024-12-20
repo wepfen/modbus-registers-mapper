@@ -20,7 +20,10 @@ The exposed variables could look like that :
 ## Installation
 
 ```python
+python -m venv .venv
+source.venv/bin/activate
 pip install -r requirements.txt
+wget https://raw.githubusercontent.com/wepfen/modbus-registers-mapper/refs/heads/main/map_modbus_registers.py
 ```
 
 ## Usage
@@ -45,7 +48,7 @@ python map_modbus_registers.py --url http://172.16.10.10 --modbus controller.lab
 
 |   modbus register | variable name   |
 |-------------------|-----------------|
-|                 1 | var_1			  |
+|                 1 | var_1           |
 |                 7 | var_2           |
 |                14 | var_3           |
 |                32 | var_4           |
