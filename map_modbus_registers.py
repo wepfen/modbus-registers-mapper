@@ -2,7 +2,6 @@ import json
 import time
 import requests
 import argparse
-import sys
 import pymodbus.client as ModbusClient
 from pymodbus import (
     FramerType,
@@ -86,9 +85,8 @@ def main():
 	parser = argument_parsing()	
 	args = parser.parse_args()
 
-	if len(sys.argv) == 1:
-		parser.print_help()		
-		sys.exit(1)
+	if not (args.modbus and args.url):
+		parser.error("Need --url and --modbus")
 
 
 	url = args.url
